@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F359478DC923BCB5857EF15 /* libPods-Chatlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0781CB7943FDD37BB6EAC22 /* libPods-Chatlight.a */; };
+		814C3ACA1B69877600E307BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC61B69877600E307BB /* Main.storyboard */; };
+		814C3ACB1B69877600E307BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC81B69877600E307BB /* Images.xcassets */; };
+		81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814A1A49DA1800E65899 /* AppDelegate.swift */; };
+		81BA814D1A49DA1800E65899 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814C1A49DA1800E65899 /* ComposeViewController.swift */; };
+		81BA81771A49E0D500E65899 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA81761A49E0D500E65899 /* libsqlite3.dylib */; };
+		81BA81791A49E0DB00E65899 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA81781A49E0DB00E65899 /* AudioToolbox.framework */; };
+		81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */; };
+		81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */; };
+		A409EA5A1BA8330000558ECE /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409EA591BA8330000558ECE /* UserHandler.swift */; };
+		A409EA5C1BA83D3500558ECE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A409EA5B1BA83D3500558ECE /* LaunchScreen.xib */; };
+		A427F8A91BA95A90007BA94D /* chatlight.png in Resources */ = {isa = PBXBuildFile; fileRef = A427F8A81BA95A90007BA94D /* chatlight.png */; };
+		A427F8AB1BA985F6007BA94D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A427F8AA1BA985F6007BA94D /* icon.png */; };
+		A427F8AD1BA987E0007BA94D /* icons in Resources */ = {isa = PBXBuildFile; fileRef = A427F8AC1BA987E0007BA94D /* icons */; };
+		A4AB05DB1BA2F43D00D64457 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB05DA1BA2F43D00D64457 /* MessageTableViewCell.swift */; };
+		A4AB05DD1BA2F49400D64457 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB05DC1BA2F49400D64457 /* MessageTableViewController.swift */; };
+		A4AB05DF1BA2FFEF00D64457 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB05DE1BA2FFEF00D64457 /* Message.swift */; };
+		A4F63C501BA6D896003CB709 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F63C4F1BA6D896003CB709 /* MessageViewController.swift */; };
+		A4F63C521BA6ED5B003CB709 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F63C511BA6ED5B003CB709 /* SettingsViewController.swift */; };
+		A4F63C551BA6F71A003CB709 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4F63C531BA6F71A003CB709 /* Model.xcdatamodeld */; };
+		A4F63C571BA6F7C2003CB709 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F63C561BA6F7C2003CB709 /* Settings.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E90FCD948087F47DD99072F /* Pods-Chatlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatlight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatlight/Pods-Chatlight.debug.xcconfig"; sourceTree = "<group>"; };
+		814C3AC71B69877600E307BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		814C3AC81B69877600E307BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		814C3AC91B69877600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81BA81451A49DA1800E65899 /* Chatlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81BA814A1A49DA1800E65899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81BA814C1A49DA1800E65899 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		81BA816B1A49DB6800E65899 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		81BA816C1A49DB6800E65899 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		81BA816D1A49DB6800E65899 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		81BA816E1A49DB6800E65899 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		81BA81761A49E0D500E65899 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		81BA81781A49E0DB00E65899 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		81BA81801A49E10C00E65899 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		A409EA591BA8330000558ECE /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
+		A409EA5B1BA83D3500558ECE /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		A427F8A81BA95A90007BA94D /* chatlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatlight.png; sourceTree = "<group>"; };
+		A427F8AA1BA985F6007BA94D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		A427F8AC1BA987E0007BA94D /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icons; sourceTree = "<group>"; };
+		A4AB05DA1BA2F43D00D64457 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		A4AB05DC1BA2F49400D64457 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		A4AB05DE1BA2FFEF00D64457 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A4F63C4F1BA6D896003CB709 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		A4F63C511BA6ED5B003CB709 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A4F63C541BA6F71A003CB709 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A4F63C561BA6F7C2003CB709 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		C0781CB7943FDD37BB6EAC22 /* libPods-Chatlight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chatlight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2DEEE51CA743D573E4E85C8 /* Pods-Chatlight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatlight.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatlight/Pods-Chatlight.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81BA81421A49DA1800E65899 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F359478DC923BCB5857EF15 /* libPods-Chatlight.a in Frameworks */,
+				81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */,
+				81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */,
+				81BA81791A49E0DB00E65899 /* AudioToolbox.framework in Frameworks */,
+				81BA81771A49E0D500E65899 /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		814C3AC51B69877600E307BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A427F8AC1BA987E0007BA94D /* icons */,
+				A427F8AA1BA985F6007BA94D /* icon.png */,
+				A427F8A81BA95A90007BA94D /* chatlight.png */,
+				814C3AC81B69877600E307BB /* Images.xcassets */,
+				814C3AC91B69877600E307BB /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		81BA813C1A49DA1800E65899 = {
+			isa = PBXGroup;
+			children = (
+				81BA81471A49DA1800E65899 /* Chatlight */,
+				814C3AC51B69877600E307BB /* Resources */,
+				81BA816A1A49DB5600E65899 /* Frameworks */,
+				81BA81461A49DA1800E65899 /* Products */,
+				D62C8FD28EC494817B7DB1AF /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		81BA81461A49DA1800E65899 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81BA81451A49DA1800E65899 /* Chatlight.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81BA81471A49DA1800E65899 /* Chatlight */ = {
+			isa = PBXGroup;
+			children = (
+				A409EA5B1BA83D3500558ECE /* LaunchScreen.xib */,
+				A4F63C561BA6F7C2003CB709 /* Settings.swift */,
+				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
+				81BA814C1A49DA1800E65899 /* ComposeViewController.swift */,
+				814C3AC61B69877600E307BB /* Main.storyboard */,
+				A4AB05DA1BA2F43D00D64457 /* MessageTableViewCell.swift */,
+				A4AB05DC1BA2F49400D64457 /* MessageTableViewController.swift */,
+				A409EA591BA8330000558ECE /* UserHandler.swift */,
+				A4AB05DE1BA2FFEF00D64457 /* Message.swift */,
+				A4F63C4F1BA6D896003CB709 /* MessageViewController.swift */,
+				A4F63C511BA6ED5B003CB709 /* SettingsViewController.swift */,
+				A4F63C531BA6F71A003CB709 /* Model.xcdatamodeld */,
+			);
+			path = Chatlight;
+			sourceTree = "<group>";
+		};
+		81BA816A1A49DB5600E65899 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81BA816B1A49DB6800E65899 /* Bolts.framework */,
+				81BA816C1A49DB6800E65899 /* Parse.framework */,
+				81BA816D1A49DB6800E65899 /* ParseCrashReporting.framework */,
+				81BA816E1A49DB6800E65899 /* ParseFacebookUtils.framework */,
+				81BA81801A49E10C00E65899 /* ParseUI.framework */,
+				81BA81751A49E0C500E65899 /* System Frameworks */,
+				C0781CB7943FDD37BB6EAC22 /* libPods-Chatlight.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81BA81751A49E0C500E65899 /* System Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */,
+				81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */,
+				81BA81781A49E0DB00E65899 /* AudioToolbox.framework */,
+				81BA81761A49E0D500E65899 /* libsqlite3.dylib */,
+			);
+			name = "System Frameworks";
+			sourceTree = "<group>";
+		};
+		D62C8FD28EC494817B7DB1AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E90FCD948087F47DD99072F /* Pods-Chatlight.debug.xcconfig */,
+				E2DEEE51CA743D573E4E85C8 /* Pods-Chatlight.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81BA81441A49DA1800E65899 /* Chatlight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "Chatlight" */;
+			buildPhases = (
+				10B6905DE053273C0EDAB3F3 /* Check Pods Manifest.lock */,
+				81BA81411A49DA1800E65899 /* Sources */,
+				81BA81421A49DA1800E65899 /* Frameworks */,
+				81BA81431A49DA1800E65899 /* Resources */,
+				81CC85E11A49F6D40076DE19 /* Upload Symbol Files */,
+				1E9B2E0E7A7FCD2EF9B801E4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chatlight;
+			productName = ParseStarterProject;
+			productReference = 81BA81451A49DA1800E65899 /* Chatlight.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81BA813D1A49DA1800E65899 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Netlight;
+				TargetAttributes = {
+					81BA81441A49DA1800E65899 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = NJ6BTV4J6M;
+					};
+				};
+			};
+			buildConfigurationList = 81BA81401A49DA1800E65899 /* Build configuration list for PBXProject "Chatlight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81BA813C1A49DA1800E65899;
+			productRefGroup = 81BA81461A49DA1800E65899 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81BA81441A49DA1800E65899 /* Chatlight */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81BA81431A49DA1800E65899 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A427F8A91BA95A90007BA94D /* chatlight.png in Resources */,
+				A427F8AB1BA985F6007BA94D /* icon.png in Resources */,
+				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
+				A427F8AD1BA987E0007BA94D /* icons in Resources */,
+				A409EA5C1BA83D3500558ECE /* LaunchScreen.xib in Resources */,
+				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10B6905DE053273C0EDAB3F3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1E9B2E0E7A7FCD2EF9B801E4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chatlight/Pods-Chatlight-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81CC85E11A49F6D40076DE19 /* Upload Symbol Files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Upload Symbol Files";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script will upload symbol files for your application,\n# so all your crash reports are going to be symbolicated\n\n# Important!\n# Before using the script, please initialize CloudCode folder and replace <path_to_cloudcode_folder> with the path to it\n#\n# Read more on Parse.com - https://parse.com/apps/quickstart#analytics/crashreporting/ios/\n############################################################\n\n\n# export PATH=/usr/local/bin:$PATH\n# cd <path_to_cloudcode_folder>\n\n# parse symbols -p \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81BA81411A49DA1800E65899 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4AB05DB1BA2F43D00D64457 /* MessageTableViewCell.swift in Sources */,
+				81BA814D1A49DA1800E65899 /* ComposeViewController.swift in Sources */,
+				A4F63C521BA6ED5B003CB709 /* SettingsViewController.swift in Sources */,
+				A4F63C551BA6F71A003CB709 /* Model.xcdatamodeld in Sources */,
+				A4AB05DF1BA2FFEF00D64457 /* Message.swift in Sources */,
+				A4AB05DD1BA2F49400D64457 /* MessageTableViewController.swift in Sources */,
+				A4F63C571BA6F7C2003CB709 /* Settings.swift in Sources */,
+				A409EA5A1BA8330000558ECE /* UserHandler.swift in Sources */,
+				A4F63C501BA6D896003CB709 /* MessageViewController.swift in Sources */,
+				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		814C3AC61B69877600E307BB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				814C3AC71B69877600E307BB /* Base */,
+			);
+			name = Main.storyboard;
+			path = ../Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81BA81621A49DA1800E65899 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81BA81631A49DA1800E65899 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81BA81651A49DA1800E65899 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E90FCD948087F47DD99072F /* Pods-Chatlight.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.netlight.Chatlight;
+				PRODUCT_NAME = Chatlight;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		81BA81661A49DA1800E65899 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2DEEE51CA743D573E4E85C8 /* Pods-Chatlight.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.netlight.Chatlight;
+				PRODUCT_NAME = Chatlight;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81BA81401A49DA1800E65899 /* Build configuration list for PBXProject "Chatlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81BA81621A49DA1800E65899 /* Debug */,
+				81BA81631A49DA1800E65899 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "Chatlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81BA81651A49DA1800E65899 /* Debug */,
+				81BA81661A49DA1800E65899 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A4F63C531BA6F71A003CB709 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A4F63C541BA6F71A003CB709 /* Model.xcdatamodel */,
+			);
+			currentVersion = A4F63C541BA6F71A003CB709 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 81BA813D1A49DA1800E65899 /* Project object */;
+}
