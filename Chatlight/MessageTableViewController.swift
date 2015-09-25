@@ -32,13 +32,15 @@ class MessageTableViewController: UITableViewController {
         self.getInbox(self.userhandler.getUsername())
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         
-        self.navigationController!.toolbarHidden = false
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController!.toolbarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
