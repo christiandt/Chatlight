@@ -16,10 +16,11 @@ class MessageTableViewController: UITableViewController {
     var userhandler = UserHandler()
     
     @IBAction func outboxButton(sender: UIBarButtonItem) {
-        
+        self.showAlert("outbox", message: "That worked, YAY!")
     }
     
     @IBAction func inboxButton(sender: AnyObject) {
+        self.showAlert("inbox", message: "That worked, YAY!")
     }
     
     @IBAction func saveUserSettings(segue:UIStoryboardSegue) {
