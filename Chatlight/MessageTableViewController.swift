@@ -15,6 +15,13 @@ class MessageTableViewController: UITableViewController {
     @IBOutlet var messagesTableView : UITableView?
     var userhandler = UserHandler()
     
+    @IBAction func outboxButton(sender: UIBarButtonItem) {
+        
+    }
+    
+    @IBAction func inboxButton(sender: AnyObject) {
+    }
+    
     @IBAction func saveUserSettings(segue:UIStoryboardSegue) {
         // returning from settings
     }
@@ -22,8 +29,10 @@ class MessageTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getMessages(self.userhandler.getUsername())
+        self.getInbox(self.userhandler.getUsername())
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        
+        self.navigationController!.toolbarHidden = false
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -52,7 +61,7 @@ class MessageTableViewController: UITableViewController {
         //return 1
     }
     
-    func getMessages(recipient: String){
+    func getInbox(recipient: String){
         // var user = PFUser.currentUser()
         let query = PFUser.query()!
         // let query = PFQuery(className:"messages")
@@ -87,7 +96,7 @@ class MessageTableViewController: UITableViewController {
     }
     
     func refresh(sender:AnyObject){
-        self.getMessages(self.userhandler.getUsername())
+        self.getInbox(self.userhandler.getUsername())
         self.refreshControl?.endRefreshing()
     }
     

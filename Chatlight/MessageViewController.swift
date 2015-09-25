@@ -18,6 +18,7 @@ class MessageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.toolbarHidden = true
         self.subjectLabel.text = selectedMessage?.subject
         self.textField.text = selectedMessage?.text
         let timestamp = selectedMessage?.timestamp

@@ -63,6 +63,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.toolbarHidden = true
         self.emailField.text = userhandler.getEmail()
         self.usernameField.text = userhandler.getUsername()
         self.passwordField.text = userhandler.getPassword()

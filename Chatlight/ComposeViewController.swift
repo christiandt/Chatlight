@@ -24,6 +24,7 @@ class ComposeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.toolbarHidden = true
         let myColor: UIColor = UIColor(red: 193/255, green: 193/255, blue: 193/255, alpha: 1.0)
         self.messageField.layer.borderColor = myColor.CGColor
         self.messageField.layer.borderWidth = 0.5
