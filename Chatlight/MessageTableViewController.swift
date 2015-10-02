@@ -10,9 +10,10 @@ import UIKit
 import Parse
 
 class MessageTableViewController: UITableViewController {
-    
-    var messages: Array<Message> = []
+    @IBOutlet weak var InboxBarButton: UIBarButtonItem!
+    @IBOutlet weak var OutboxBarButton: UIBarButtonItem!
     @IBOutlet var messagesTableView : UITableView?
+    var messages: Array<Message> = []
     var userhandler = UserHandler()
     var inbox = true
     
@@ -20,6 +21,7 @@ class MessageTableViewController: UITableViewController {
         if self.inbox{
             self.getOutbox()
             self.inbox = false
+            self.updateBarButtonStates()
         }
         //self.showAlert("outbox", message: "That worked, YAY!")
     }
@@ -28,6 +30,7 @@ class MessageTableViewController: UITableViewController {
         if !self.inbox{
             self.getInbox(self.userhandler.getUsername())
             self.inbox = true
+            self.updateBarButtonStates()
         }
         //self.showAlert("inbox", message: "That worked, YAY!")
     }
@@ -39,6 +42,7 @@ class MessageTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.updateBarButtonStates()
         self.getInbox(self.userhandler.getUsername())
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         
@@ -51,6 +55,12 @@ class MessageTableViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         self.navigationController!.toolbarHidden = false
+        if self.inbox{
+            self.getInbox(self.userhandler.getUsername())
+        }
+        else{
+            self.getOutbox()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,7 +98,7 @@ class MessageTableViewController: UITableViewController {
             }
         }
         self.messages = Array(self.messages.reverse())
-        print("refreshed")
+        //print("refreshed")
         self.tableView.reloadData()
     }
     
@@ -179,6 +189,11 @@ class MessageTableViewController: UITableViewController {
         }
         alertBox.addAction(OKAction)
         presentViewController(alertBox, animated: true, completion: nil)
+    }
+    
+    func updateBarButtonStates(){
+        self.InboxBarButton.enabled = !self.inbox
+        self.OutboxBarButton.enabled = self.inbox
     }
     
     
