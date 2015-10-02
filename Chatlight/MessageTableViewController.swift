@@ -14,13 +14,22 @@ class MessageTableViewController: UITableViewController {
     var messages: Array<Message> = []
     @IBOutlet var messagesTableView : UITableView?
     var userhandler = UserHandler()
+    var inbox = true
     
     @IBAction func outboxButton(sender: UIBarButtonItem) {
-        self.showAlert("outbox", message: "That worked, YAY!")
+        if self.inbox{
+            self.getOutbox()
+            self.inbox = false
+        }
+        //self.showAlert("outbox", message: "That worked, YAY!")
     }
     
     @IBAction func inboxButton(sender: AnyObject) {
-        self.showAlert("inbox", message: "That worked, YAY!")
+        if !self.inbox{
+            self.getInbox(self.userhandler.getUsername())
+            self.inbox = true
+        }
+        //self.showAlert("inbox", message: "That worked, YAY!")
     }
     
     @IBAction func saveUserSettings(segue:UIStoryboardSegue) {
@@ -64,6 +73,25 @@ class MessageTableViewController: UITableViewController {
         //return 1
     }
     
+    func updateMessagesList(objects: AnyObject?){
+        self.messages.removeAll(keepCapacity: false)
+        if let objects = objects as? [PFObject] {
+            for object in objects {
+                let objectid = object.objectId
+                let sender = object["sender"] as! String
+                let recipient = object["recipient"] as! String
+                let subject = object["title"] as! String
+                let text = object["message"] as! String
+                let timestamp = object.createdAt!
+                
+                self.messages.append(Message(objectid: objectid!, sender: sender, recipient: recipient, subject: subject, timestamp: timestamp, text: text))
+            }
+        }
+        self.messages = Array(self.messages.reverse())
+        print("refreshed")
+        self.tableView.reloadData()
+    }
+    
     func getInbox(recipient: String){
         // var user = PFUser.currentUser()
         let query = PFUser.query()!
@@ -74,22 +102,24 @@ class MessageTableViewController: UITableViewController {
             (objects: [AnyObject]?, error: NSError?) -> Void in
             
             if error == nil{
-                self.messages.removeAll(keepCapacity: false)
-                if let objects = objects as? [PFObject] {
-                    for object in objects {
-                        let objectid = object.objectId
-                        let sender = object["sender"] as! String
-                        let recipient = object["recipient"] as! String
-                        let subject = object["title"] as! String
-                        let text = object["message"] as! String
-                        let timestamp = object.createdAt!
-                        
-                        self.messages.append(Message(objectid: objectid!, sender: sender, recipient: recipient, subject: subject, timestamp: timestamp, text: text))
-                    }
-                }
-                self.messages = Array(self.messages.reverse())
-                print("refreshed")
-                self.tableView.reloadData()
+                self.updateMessagesList(objects)
+            }
+                
+            else{
+                print("Error")
+            }
+        }
+    }
+    
+    func getOutbox(){
+        let query = PFUser.query()!
+        query.parseClassName = "messages"
+        query.whereKey("sender", equalTo: self.userhandler.getUsername())
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            
+            if error == nil{
+                self.updateMessagesList(objects)
             }
                 
             else{
@@ -99,11 +129,16 @@ class MessageTableViewController: UITableViewController {
     }
     
     func refresh(sender:AnyObject){
-        self.getInbox(self.userhandler.getUsername())
+        if self.inbox{
+            self.getInbox(self.userhandler.getUsername())
+        }
+        else{
+            self.getOutbox()
+        }
         self.refreshControl?.endRefreshing()
     }
     
-    func deleteMessage(id: String){
+    func deleteParseMessage(id: String){
         let query = PFQuery(className:"messages")
         print(id, terminator: "")
         query.getObjectInBackgroundWithId(id) {
@@ -162,7 +197,7 @@ class MessageTableViewController: UITableViewController {
         if editingStyle == .Delete {
             
             let messageID = self.messages[indexPath.row].objectid
-            self.deleteMessage(messageID)
+            self.deleteParseMessage(messageID)
 
             self.messages.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)

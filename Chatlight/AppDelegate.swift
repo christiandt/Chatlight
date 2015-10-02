@@ -89,12 +89,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let installation = PFInstallation.currentInstallation()
         installation.setDeviceTokenFromData(deviceToken)
         installation.saveInBackground()
+        let userhandler = UserHandler()
 
-        PFPush.subscribeToChannelInBackground("") { (succeeded: Bool, error: NSError?) in
+        PFPush.subscribeToChannelInBackground(userhandler.getUsername()) { (succeeded: Bool, error: NSError?) in
             if succeeded {
-                print("ParseStarterProject successfully subscribed to push notifications on the broadcast channel.");
+                print("ParseStarterProject successfully subscribed to push notifications on the username channel.");
             } else {
-                print("ParseStarterProject failed to subscribe to push notifications on the broadcast channel with error = %@.", error)
+                print("ParseStarterProject failed to subscribe to push notifications on the username channel with error = %@.", error)
             }
         }
     }

@@ -402,7 +402,7 @@
 			baseConfigurationReference = 3E90FCD948087F47DD99072F /* Pods-Chatlight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Christian Tuen (M95FS5H3W6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -411,9 +411,9 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.netlight.Chatlight;
+				PRODUCT_BUNDLE_IDENTIFIER = com.christiandt.chatlight;
 				PRODUCT_NAME = Chatlight;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "40170566-2649-4f39-8b81-5b744c9ff686";
 			};
 			name = Debug;
 		};
@@ -422,7 +422,7 @@
 			baseConfigurationReference = E2DEEE51CA743D573E4E85C8 /* Pods-Chatlight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Christian Tuen (M95FS5H3W6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -431,9 +431,9 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.netlight.Chatlight;
+				PRODUCT_BUNDLE_IDENTIFIER = com.christiandt.chatlight;
 				PRODUCT_NAME = Chatlight;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "40170566-2649-4f39-8b81-5b744c9ff686";
 			};
 			name = Release;
 		};
